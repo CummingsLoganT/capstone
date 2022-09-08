@@ -1,0 +1,30 @@
+:root {
+    --text-color: yellow;
+}
+
+
+.collapsible {
+    background: linear-gradient(30deg , #D60270 , #9B4F96 , #0038A8);
+    color: white;
+    cursor:default;
+    padding: 6px;
+    width: 15%;
+    border: none;
+    text-align: center;
+    outline: limegreen, 5px;
+    font-size: 15px;
+  
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: 10%;
+    grid-template-rows: 100px 200px;
+    place-items: left  ;
+}
+
+.content {
+width: 40px;  /* Or whatever */
+height: 40px; /* Or whatever */
+margin: auto;
+}
