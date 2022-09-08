@@ -1,0 +1,63 @@
+/*
+
+figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
+drag and drop functionality obviously
+when you go to grab and move the node have it slowly fold in so it is smaller while positioning it. maybe have a shift-click option that allows for you to position it while it is expanded
+
+!! use different shapes to denote different node templates -website-
+!! SOME TYPE OF ALERT LIKE THE WHALE AMBIENCE FROM DIGITAL OCEAN LOOOOOOOl
+
+
+maybe have frame for the hover content display. smooth transition could feel satisfying and look interesting. figure out a color schema for this with that other website. Ciaran ftw.
+
+on click boxes show contents and have an optional hover option if holding shift is detected. or potentially just have different pointers that trigger different functions
+
+need to figure out solution for linking things based on a dynamic heirarchy
+
+drag and drop from sidebar
+
+
+*/
+
+
+.collapsible {
+  background: linear-gradient(30deg , #D60270 , #9B4F96 , #0038A8);
+  color: white;
+  cursor:default;
+  padding: 6px;
+  width: 15%;
+  border: none;
+  text-align: center;
+  outline: limegreen, 5px;
+  font-size: 15px;
+
+}
+
+.active, .collapsible:hover {
+  background: #9B4F96;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+} 
+
+.active:after {
+  content: "\2212";
+} 
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 15%;
+  background-color: #f1f1f1;
+}
+
+/*
+put notes about stuff here.
+ */

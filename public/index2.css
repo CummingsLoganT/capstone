@@ -1,0 +1,51 @@
+/*
+
+figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
+drag and drop functionality obviously
+when you go to grab and move the node have it slowly fold in so it is smaller while positioning it. maybe have a shift-click option that allows for you to position it while it is expanded
+
+!! use different shapes to denote different node templates -website-
+!! SOME TYPE OF ALERT LIKE THE WHALE AMBIENCE FROM DIGITAL OCEAN LOOOOOOOl
+! balls
+
+maybe have frame for the hover content display. smooth transition could feel satisfying and look interesting. figure out a color schema for this with that other website. Ciaran ftw.
+
+*/
+
+
+:root {
+    --r: 70;
+    --g: 180;
+    --b: 169;
+    --text-color: rgb(var(--r) , var(--g) , var(--b));
+    /* color: var(--text-color); copy/paste variable anything color */
+}
+
+.content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: 100px 200px;
+    place-items: center;
+}
+
+article {
+    width: clamp(200px , 50% , 600px);
+}
+
+button:focus-within .collapsible {
+    opacity: 1;
+    visibility: visible;
+}
+
+button {
+   margin-top: 25px;
+}
+
+/*
+put notes about stuff here.
+ */
