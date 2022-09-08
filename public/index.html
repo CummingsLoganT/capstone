@@ -2,61 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/*
-figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
-drag and drop functionality obviously
-when you go to grab and move the node have it slowly fold in so it is smaller while positioning it. maybe have a shift-click option that allows for you to position it while it is expanded
-*/
-
-
-
-.collapsible {
-  background: linear-gradient(30deg , #D60270 , #9B4F96 , #0038A8);
-  color: white;
-  cursor:default;
-  padding: 6px;
-  width: 15%;
-  border: none;
-  text-align: center;
-  outline: limegreen, 5px;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background: #9B4F96;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-} 
-
-.active:after {
-  content: "\2212";
-} 
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  width: 15%;
-  background-color: #f1f1f1;
-}
-
-button {
-   margin-top: 25px;
-}
-
-/*
-put notes about stuff here.
- */
-
-</style>
+<link rel="stylesheet" href="./index3.css">
 </head>
 <body>
 
@@ -64,51 +10,33 @@ put notes about stuff here.
 
 <p>sidebar stuff maybe??</p>
 
+<div class="grid">
 
-<button class="collapsible">main node</button>
-<div class="content">
-  <p><img class="a" src="https://www.kindpng.com/picc/m/26-269077_icon-icx-icon-icx-icon-hd-png-download.png" width="35" height="35">sample text</p>
-</div>
+  <i>test</i>
+  <i>test2</i>
+  <i><textarea name="" id="" cols="10" rows="12"></textarea></i>
+  <i>
+  <button class="collapsible">main node</button>
+  <div class="content">
+    <p><img class="a" src="https://www.kindpng.com/picc/m/26-269077_icon-icx-icon-icx-icon-hd-png-download.png" width="35" height="35">sample text</p>
+  </div>
+  </i>
 
-<button class="collapsible">1</button>
-<div class="content">
-  <p>sample text</p>
 </div>
-<button class="collapsible">2</button>
-<div class="content">
-  <p><textarea name="testTextArea" id="" cols="30" rows="10">sample text</textarea></p>
-</div>
-<button class="collapsible">3</button>
-<div class="content">
-  <p>sample text</p>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("mouseover", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-  coll[i].addEventListener("mouseout" , function () {
-    wait(10)
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+  <button class="collapsible">1</button>
+  <div class="content">
+    <p>sample text</p>
+  </div>
+  <button class="collapsible">2</button>
+  <div class="content">
+    <p><textarea name="testTextArea" id="" cols="15" rows="5">sample text</textarea></p>
+  </div>
+  <button class="collapsible">3</button>
+  <div class="content">
+    <p>sample text</p>
+  </div>
+  
+<script src="./library.js"></script>
 
 </body>
 </html>
