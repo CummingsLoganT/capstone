@@ -3,13 +3,18 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+/*
+figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
+drag and drop functionality obviously
+when you go to grab and move the node have it slowly fold in so it is smaller while positioning it. maybe have a shift-click option that allows for you to position it while it is expanded
+*/
 
 
 
 .collapsible {
-  background-color: #777;
+  background: linear-gradient(30deg , #D60270 , #9B4F96 , #0038A8);
   color: white;
-  cursor:crosshair;
+  cursor:default;
   padding: 6px;
   width: 15%;
   border: none;
@@ -19,7 +24,7 @@
 }
 
 .active, .collapsible:hover {
-  background-color: darkmagenta;
+  background: #9B4F96;
 }
 
 .collapsible:after {
@@ -47,8 +52,9 @@ button {
    margin-top: 25px;
 }
 
-
-
+/*
+put notes about stuff here.
+ */
 
 </style>
 </head>
@@ -70,7 +76,7 @@ button {
 </div>
 <button class="collapsible">2</button>
 <div class="content">
-  <p>sample text</p>
+  <p><textarea name="testTextArea" id="" cols="30" rows="10">sample text</textarea></p>
 </div>
 <button class="collapsible">3</button>
 <div class="content">
@@ -82,7 +88,17 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("mouseover", function () {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+  coll[i].addEventListener("mouseout" , function () {
+    wait(10)
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
