@@ -1,17 +1,12 @@
 .grid {
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    grid-template-columns: 15% 1fr 1fr 1fr;
 }
 
 .sidebar {
     padding: 2rem;
-
-    grid-column-start: 1;
-
     border: 1px solid red;
-
 }
 
 .node {
@@ -23,11 +18,26 @@
 .sandbox {
     padding: 2rem;
     border: 1rem;
-    /* background-color: aqua; */
-    grid-column: 2 / 5;
-    grid-row: 1 / 5;
-
+    background-color: aqua;
 }
+
+
+
+
+/* "fixed sidebar" */
+#second-node {
+    grid-row: 2;
+}
+
+#third-node {
+    grid-row: 3;
+}
+
+#fourth-node {
+    grid-row: 4;
+}
+
+
 
 /*
 .collapsible {
@@ -42,6 +52,34 @@
     font-size: 15px;
   
   }
+
+
+
+
+  
+~~~
+:root {
+    counter-reset:headings;
+}
+
+h1 {
+    counter-increment:headings;
+}
+
+||&&||
+
+.dropdown {
+opacity: 0;
+visibility: hidden;
+}
+
+button:focus-within .dropdown {
+opacity: 1;
+visibilty: visible;
+}
+
+~~~
+
 
 
 
