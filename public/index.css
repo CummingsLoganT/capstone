@@ -42,4 +42,34 @@
     font-size: 15px;
   
   }
+
+
+
+
+  My goal is to try to make a comprehensive brainstorming app that will have a visual representation akin to spider diagrams, (radial?) info trees. Different nodes will have the ability to hold links, maybe keywords, descriptions, names, connecting node(s), etc.
+
+                            !!M-V-P!!
+
+!~ visually represent different ideas, things, definitions, etc. using nodes on !a (radial?) spider diagram and/or tree
+!~ hover function that shows  semi-detailed view of the nodes
+!~ macro and micro organizational options
+
+
+figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
+
+when you go to grab and move the node have it slowly fold in so it is smaller while positioning it. maybe have a shift-click option that allows for you to position it while it is expanded
+
+!! use different shapes to denote different node templates -website-
+!! SOME TYPE OF ALERT LIKE THE WHALE AMBIENCE FROM DIGITAL OCEAN LOOOOOOOl
+
+
+maybe have frame for the hover content display. smooth transition could feel satisfying and look interesting. figure out a color schema for this with that other website. Ciaran ftw.
+
+on click boxes show contents and have an optional hover option if holding shift is detected. or potentially just have different pointers that trigger different functions
+
+need to figure out solution for linking things based on a dynamic heirarchy
+
+drag and drop from sidebar
+
+
 */

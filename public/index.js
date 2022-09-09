@@ -17,6 +17,8 @@ function onDrop (event) {
     const id = event
         .dataTransfer
         .getData('text');
+        // console.log(event.dataTransfer.getData)
+        console.log(id)
 
      const draggableElement = document.getElementById(id);
 
@@ -26,5 +28,5 @@ function onDrop (event) {
 
     event
         .dataTransfer
-        // .clearData();
+        .clearData();
 }
