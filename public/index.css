@@ -82,9 +82,17 @@ visibilty: visible;
 
 
 
-
+!!CURRENT GOAL IS TO MAKE SURE THAT 
+!!!!!! the sidebar has 3+ formats to choose from. they can use these to piece together different nodes that will represent whatever ideas they want to get out of their head. 
 
   My goal is to try to make a comprehensive brainstorming app that will have a visual representation akin to spider diagrams, (radial?) info trees. Different nodes will have the ability to hold links, maybe keywords, descriptions, names, connecting node(s), etc.
+
+  need to go through and make it so that the og element in the sidebar clears after (grabbing?) placing.
+
+  remember to make it so that there isn't a big shift in the layout of the page when you make changes to the sandbox area.
+
+  so if we make it so that when you import the diff elements it sized down to a few characters or w/e we could leave the variable containers as they are. that way when we go and do the swirly with hover expand animations it is potentially very aesthetically pleasing as well as functional for the overall website.
+
 
                             !!M-V-P!!
 
