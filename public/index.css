@@ -1,28 +1,95 @@
+:root {
+    --color1: rgb(0 , 43 , 91)
+    --color2: rgb(43 , 72 , 101) 
+    --color3: rgb(37 , 109 , 133)
+    --color4: rgb(143 , 227 , 207) 
+}
+
+body {
+    overflow: hidden;
+}
+
+html {
+    background: radial-gradient(#222, #000);
+    position: auto;
+    height: 100%;
+}
+
 .grid {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 15% 1fr 1fr 1fr;
+    gap: 1rem;
+
+    grid-template-columns: 15% auto auto auto;
+    grid-template-rows: auto auto auto auto;
+
 }
 
 .sidebar {
     padding: 2rem;
-    border: 1px solid red;
+    border: 1px solid var(--color1);
+    background: linear-gradient(30deg , rgb(143 , 227 , 207) , rgb(37 , 109 , 133) , rgb(0 , 43 , 91));
+        position:relative;
+    color: #fff;
+
+    box-shadow:
+      0 0 2px 2px rgb(43 , 72 , 101),
+      0 0 2px 2px rgb(0 , 43 , 91), 
+      0 0 2px 2px rgb(143, 227, 207);
 }
+
 
 .node {
-    background: linear-gradient(30deg , #D60270 , #9B4F96 , #0038A8);
-    
-
+    background: linear-gradient(30deg , #D60270 , #9B4F96 , rgb(0, 56, 168));
 }
+
 
 .sandbox {
-    padding: 2rem;
-    border: 1rem;
-    background-color: aqua;
+    /* padding: 2rem; */
+    border: 1px solid rgb(0, 225, 255);
+    color: #fff;
+
+    /* background-color: aqua; */
+
+    /* opacity: 35%; */
 }
 
+.veil {
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 75px;
 
+    visibility: hidden;
+}
 
+.veil2 {
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 75px;
+    text-shadow: #fff;
+
+    visibility: hidden;
+}
+
+span:hover {
+    color: rgb(143, 227, 207);
+    transition: color 5s;
+  }
+  span:hover:before, span:hover:after {
+    
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+  }
+
+p:nth-child(6) {
+    opacity: 35%;
+    background-color: rgb(35, 103, 116);
+}
 
 /* "fixed sidebar" */
 #second-node {
@@ -37,7 +104,15 @@
     grid-row: 4;
 }
 
+#sandbox {
+    grid-row: 2;
+    grid-column: 3;
 
+}
+
+.content {
+    /* visibility: hidden; */
+}
 
 /*
 .collapsible {
@@ -48,13 +123,10 @@
     width: 15%;
     border: none;
     text-align: center;
-    outline: limegreen, 5px;
-    font-size: 15px;
+    outline: limegreen, 2px;
+    font-size: 2px;
   
   }
-
-
-
 
   
 ~~~
@@ -80,6 +152,13 @@ visibilty: visible;
 
 ~~~
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!main veil for screen has interactive title with the name Modular Mind Map or maybe it expands from 3M which can also increment hvoerCount
+
+landing page is a single node that when hovered shows each of the basic data structures... expanding outward -- after selecting the basic format, that goes center screen, and the rest goes to the sidebar. and it could be like ping ponging across the viewport.
+!the floating dot (think mandy's landing page)... begin presentation with a (blank/plain?) background that has a centralized dot (small image) might modestly expand to say click me. might let you listen to whales (jeddy tha real mvp)... either way... after you (trigger event) it transitions you to the meat and taters. In summary, this could be the landing page for my website which expands from that centralized point into the main UI.... idk if that's even something I can pull off... but... it could be kinda sick depending on implementaion. 
+
+
+!expanding certain nodes could make the text spill out radially leaving a somewhat oblong shape... or something... idk, I feel like there is potential in this idea. says the idea-maker.
 
 
 !!CURRENT GOAL IS TO MAKE SURE THAT 
@@ -100,6 +179,8 @@ visibilty: visible;
 !~ hover function that shows  semi-detailed view of the nodes
 !~ macro and micro organizational options
 
+!stretch 
+
 
 figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
 
@@ -118,4 +199,85 @@ need to figure out solution for linking things based on a dynamic heirarchy
 drag and drop from sidebar
 
 
+
+!TODO LIST
+
+
+stop the infinitely stacking issue -- make it so that each element can only have 1 of each node type, potentially... 
+
 */
+
+
+
+/* TEST SHIT 
+*/
+
+
+
+
+.sidebar:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+    animation: glowing 20s linear infinite;
+    /* opacity: 0; */
+  }
+
+  .sidebar:hover:before {
+    opacity: 0;
+  } 
+  
+  .sidebar:hover:after {
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+  }
+  
+  
+  .sidebar::before {
+    content: "";
+    /* width: 104%; */
+    /* height: 102%; */
+    /* border-radius: 8px; */
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      /* position: absolute; */
+      /* z-index: -1; */
+      /* top: -1%; */
+      /* left: -2%; */
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .sidebar::after {
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    /* filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2); */
+      /* opacity: 1; */
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  /* @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  } */
+  
+
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
