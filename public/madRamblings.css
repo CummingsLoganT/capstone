@@ -1,8 +1,5 @@
 :root {
-    --color1: rgb(0 , 43 , 91)
-    --color2: rgb(43 , 72 , 101) 
-    --color3: rgb(37 , 109 , 133)
-    --color4: rgb(143 , 227 , 207) 
+
 }
 
 body {
@@ -182,9 +179,6 @@ landing page is a single node that when hovered shows each of the basic data str
 !~ visually represent different ideas, things, definitions, etc. using nodes on !a (radial?) spider diagram and/or tree
 !~ hover function that shows  semi-detailed view of the nodes
 !~ macro and micro organizational options
-
-!stretch 
-
 
 figure out a way to manipulate the mouseout event to make it feel more intuitive. no idea what that means yet
 
