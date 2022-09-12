@@ -1,6 +1,6 @@
 :root {
     --boxColor: #0ff7;
-    --rotateSpeed: 30s
+    --rotateSpeed: 30s;
 }
 
 body {
@@ -15,7 +15,15 @@ body {
  /*he mentioned that this combined with 75px font size makes 750 pixels. makes sense.*/
 }
 
+.grid {
+    position: absolute;
+    top: -1em;
+    left: 1em;
+}
 
+.article {
+    /* -webkit-user-drag: auto; */
+}
 
 .scene {
     position:relative;
@@ -33,6 +41,13 @@ as the main variable for the size of everything which is fucking brilliant
 
 
   /* 
+
+
+  maybe I can give the class whatever relative perspective with ease in transition that gets attached when the user drops the first node which waterfalls JS 
+
+
+
+
   have a shift in perspective from like 50em while simultaneously fading out the presentation 'landing page'
 
   maybe have the landing page be on the ground and then swing perspective up to see the actual project
@@ -53,14 +68,14 @@ as the main variable for the size of everything which is fucking brilliant
   */
 
    
-.ball { 
+.ball {  
     width: 1em;
     height: 1em;
     border-radius: 50%;
     background: lightblue;
 
     position: absolute;
-    left: -.5rem;
+    left: -.5em;
     bottom: 1em;
     background-image: radial-gradient(
         circle at top ,
@@ -69,6 +84,8 @@ as the main variable for the size of everything which is fucking brilliant
         #000
 
     );
+animation: sceneRotate --rotateSpeed infinite linear reverse;
+
 }
 
 .ballShadow {
@@ -76,17 +93,18 @@ as the main variable for the size of everything which is fucking brilliant
     width: 100%;
     height: 100%;
     /* background-color: #fff; */
-    background-image: radial-gradient(#000 , #0000 50%);
+    background-image: radial-gradient(#0007 , #0000 50%);
 }
 
 
 .cube {
     width: 2em;
     height: 2em;
+    background: var(--boxColor);
     transform-style: preserve-3d;
     position:absolute;
     top: -1em;
-    left: 1em;
+    left: -1em;
 
 }
 
@@ -129,10 +147,10 @@ as the main variable for the size of everything which is fucking brilliant
     transform: 
       translate(-50% , -50%)
       rotateX(90deg);
+
     width: 15em;
     height: 15em;
     background-image: 
-    radial-gradient(#0000 , #000),
     repeating-conic-gradient(
         from 45deg , 
         #111 0deg 90deg , 
