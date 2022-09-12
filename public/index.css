@@ -152,7 +152,11 @@ visibilty: visible;
 
 ~~~
 
+have the nodes on the side margind and spaced for circle make it bouncy and have it collapsed. description up top. when you drop it on the table, shit happens like a ripple effect. 
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!main veil for screen has interactive title with the name Modular Mind Map or maybe it expands from 3M which can also increment hvoerCount
+conditionally check if drop count is 0, if so, go and set the node as anchor. maybe in the future expand on that and have it fit into the hierarchy system we're still working out. 
+
 
 landing page is a single node that when hovered shows each of the basic data structures... expanding outward -- after selecting the basic format, that goes center screen, and the rest goes to the sidebar. and it could be like ping ponging across the viewport.
 !the floating dot (think mandy's landing page)... begin presentation with a (blank/plain?) background that has a centralized dot (small image) might modestly expand to say click me. might let you listen to whales (jeddy tha real mvp)... either way... after you (trigger event) it transitions you to the meat and taters. In summary, this could be the landing page for my website which expands from that centralized point into the main UI.... idk if that's even something I can pull off... but... it could be kinda sick depending on implementaion. 
@@ -266,18 +270,3 @@ stop the infinitely stacking issue -- make it so that each element can only have
     animation: spin 2.5s linear infinite;
   }
   
-  /* @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  } */
-  
-
-  @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
