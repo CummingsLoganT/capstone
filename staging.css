@@ -1,179 +1,90 @@
-:root {
-    --boxColor: #0ff7;
-}
 
 html {
     background: radial-gradient(#222, #000);
+    overflow: hidden;
 }
 
 body {
-  overflow: hidden;
-  min-height: 100vh;
-  display: flex; 
-  justify-content: center;
-  align-items:center;
-  font-size: 75px;
-  perspective: 10em;
-  perspective-origin: 50% calc(50% - 2em);
-}
-/*he mentioned that this combined with 75px font size makes 750 pixels. makes sense. this may make shit weird when I go to show the different articles and whatnot*/
 
-.grid {
-    position: absolute;
-    top: -1em;
-    left: 1em;
-}
-
-.grid1 {
-position: relative;
-rotate: 45deg;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+perspective: 750px;
+perspective-origin: 50% calc(50% - 150px);
 }
 
 .scene {
-    position:relative;
-    transform-style: preserve-3d;
-    animation: sceneRotate var(--rotateSpeed) infinite linear;
+position: relative;
+transform-style: preserve-3d;
+}
+
+.ball {
+width: 75px;
+height: 75px;
+border-radius: 50%;
+background: white;
+
+position: absolute;
+left: -37px;
+bottom: 75px;
+transform-style: preserve-3d;
 
 }
 
-/* he is using 
-as the main variable for the size of everything which is fucking brilliant
-*/
+.sidebar {
 
+width: 150px;
+height: 150px;
 
-  /* 
+position: absolute;
+right: 250px;
+bottom: 150px;
+transform-style: preserve-3d;
 
+}
 
-  maybe I can give the class whatever relative perspective with ease in transition that gets attached when the user drops the first node which waterfalls JS 
-
-
-
-
-  have a shift in perspective from like 50em while simultaneously fading out the presentation 'landing page'
-
-  maybe have the landing page be on the ground and then swing perspective up to see the actual project
-  "they told me to be creative with white space, so I made sure to have plenty of it. with that inspiration, I also added a dimension."
-
-  how do i make the MMM 3d
-  could have diff pages be floating around on the landing page and then have it zoom in when you click
-
-  maybe have the cube be some kind of veil... idk
-  maybe have the 
-  maybe have the cube request the magic word which triggers some stuff to remove the div containing the cube to show the project
-
-  5s animation that eventually ends with the words... "whats the magic word?"
-  NO
-  guess again.
-
-  security through obscurity is good if you're the only one that knows
-  */
-
-   
-.ball {  
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
+.right , .front , .back {
+    /* opacity: 35%; */
+    
     background: lightblue;
-
-     position: absolute; 
-     left: -.5em;
-    bottom: 1em; 
-    background-image: radial-gradient(
-        circle at top ,
-        lightblue , 
-        70% ,
-        #000
-
-    );
-animation: sceneRotate --rotateSpeed infinite linear reverse;
-
-}
-
-.ballShadow {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background-color: #fff; */
-    background-image: radial-gradient(#0007 , #0000 50%);
+    
 }
 
-
-.cube {
-    width: 2em;
-    height: 2em;
-    background: var(--boxColor);
-    transform-style: preserve-3d;
-    position:absolute;
-    top: -1em;
-    left: -1em;
-
+.left {
+    background: white;
+    transform:skewX(5px);
 }
 
-.left , .right , .front , .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--boxColor);
-    box-shadow: 0 0 0.5em #000 inset;
-}
-
-.front {transform: translateZ(1em);}
-.right {transform: rotateY(90deg) translateZ(1em);}
-.back {transform: rotateY(180deg) translateZ(1em);}
-.left {transform: rotateY(270deg) translateZ(1em);}
 
 .top {
     position: absolute;
-    width: 2em;
-    height: 2em;
-    background: var(--boxColor);
+    width: 150px;
+    height: 150px;
+    background: gray;
     transform: translateY(-50%) rotateX(90deg);
-    box-shadow: 0 0 0.5em #000a inset;
 }
 
-.bottom {
-    position: absolute;
-    width: 2em;
-    height: 2em;
-    background: #0007;
-    bottom: 0;
-    transform: translateY(50%) rotateX(90deg);
-    box-shadow: 0 0 0.5em #000;
 
-}
+
 
 .floor {
-    position: absolute;
-    border: 4px solid rgb(0, 225, 255);
-    animation: border-pulsate 4s infinite;
-    transition-timing-function: ease;
 
-    top: 1em;
-    transform: 
-      translate(-50% , -50%)
-      rotateX(90deg);
+position: absolute;
+top: 75px;
+transform: translate(-50% , -50%) rotateX(90deg);
+width: 1050px;
+height: 1050px;
+background-image: 
+radial-gradient(#0000 , #000) ,
+repeating-conic-gradient(
+from 45deg , 
+#111 0deg 90deg ,
+#222 90deg 180deg
 
-    width: 15em;
-    height: 15em;
-    background-image: 
-    repeating-conic-gradient(
-        from 45deg , 
-        #000 0deg 69deg , 
-        #002B5B 69deg 180deg);
-    background-size: .69em .69em;
+);
+background-size: 100% , 75px 75px;
 }
-
-@keyframes border-pulsate {
-    0%   { border-color: rgba(0, 255, 255, 1); }
-    50%  { border-color: rgba(0, 255, 255, 0); }
-    100% { border-color: rgba(0, 255, 255, 1); }
-}
-
-@keyframes sceneRotate {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  }
