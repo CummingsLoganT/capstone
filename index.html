@@ -12,10 +12,12 @@
         <div class="sidebar">
             <div class="firstNode">
                 <div class="grabMe"
-                    draggable="true">
-                    
+                    draggable="true"
+                    ondragstart="onDragStart(event);"
+                    >
+                    dfgdfg
                     <div class="sidebarText">
-                        <input type="text">
+                        <input type="text">dfgdfgdfg
                     </div>
                 </div>
             </div>
@@ -28,35 +30,59 @@
         <div class="title">Modular Mind Map</div>
 
         <div class="floor">
-            <div class="dropZone">
+            <div  
+            id="one" 
+            class="dropZone"
+            ondragover="onDragOver(event);"
+            ondrop="onDrop(event);"
+            >
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="two" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="three" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="four" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="five" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="six" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="seven" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="eight" 
+            class="dropZone">
                 dropzone
             </div>
-            <div class="dropZone">
+            <div 
+            id="nine" 
+            class="dropZone">
                 dropzone
             </div>
         </div>
 
     </div>
+
+    <script src="./index.js"></script>
+
 </body>
 </html>
