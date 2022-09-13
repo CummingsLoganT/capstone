@@ -17,6 +17,11 @@ font-size: 25px;
 
 }
 
+
+/*!submit button at bottom and triggers event that goes into json
+have some type of ui to access it 
+*/
+
 .scene {
 position: relative;
 transform-style: preserve-3d;
@@ -50,24 +55,32 @@ transform-style: preserve-3d;
 */
 
 .firstNode {
+
     top: 10px;
     left: -25px;
     height: 150px;
     width: 350px;
     background: #000a;
     position: relative;
+    display: flex;
+
+
+
 }
 
 .secondNode {
+
     top: 15px;
     left: -25px;
     height: 150px;
     width: 350px;
     background: #000a;
     position: relative;
+
 }
 
 .thirdNode {
+
     top: 20px;
     left: -25px;
     width: 350px;
@@ -76,9 +89,11 @@ transform-style: preserve-3d;
     position: relative;
     animation: bounce 2s infinite;
 
+
 }
 
 .fourthNode {
+
     top: 25px;
     left: -25px;
     width: 350px;
@@ -89,8 +104,23 @@ transform-style: preserve-3d;
 
 }
 
+.grabMe {
+
+    height: 33%;
+    width: 67%;
+    background: #000;
+    display: flex;
+    align-self: center;
+    position: relative;
+    transform: translateX(25%);
+
+
+}
+
 .titleNode {
+
     text-decoration: underline;
+
 }
 
 .sidebar {
@@ -113,6 +143,28 @@ transform-style: preserve-3d;
 
 }
 
+.sidebarText {
+
+    display: flex;
+    align-self: center;
+    position: relative;
+    transform: translateX(12.5%);
+
+}
+
+.dropZone {
+    
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 60px;
+    transform: 
+    translateZ(5rem)
+    rotateX(-90deg)
+    translateX(510px)
+    ;
+
+}
 
 
 
