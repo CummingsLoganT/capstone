@@ -1,0 +1,109 @@
+html {
+
+    background: radial-gradient(#111, #222);
+    overflow: hidden;
+
+}
+
+body {
+
+    min-height: 100vh;
+    display: flex;
+    
+    font-size: 25px;
+
+}
+
+.clothes {
+
+    /* visibility: hidden; */
+
+
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.topNav {
+
+    /* visibility: hidden; */
+
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    background: #467a;
+
+}
+
+.topNavBoxes {
+
+    
+    display: flex;
+    color: azure;
+
+
+}
+
+.sidebar {
+
+    /* visibility: hidden; */
+
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+    position: absolute;
+    height: 100vh;
+    width: 12.5vw;
+    border: 2px solid #000;
+    box-shadow: 0 0 3px 3px #444;
+
+
+    background-color: #467;
+}
+
+.sideBox {
+
+    box-shadow: 0 0 3px 3px #111a;
+    border: 3px solid #000;
+    display: flex;
+
+    position: relative;
+    height: 10vh;
+    width: 10vw;
+    background: #fff;
+
+}
+
+.sandbox {
+
+    /* visibility: hidden; */
+
+    display: grid;
+    height: 95vh;
+    width: 86vw;
+    position: absolute;
+    top: 35px;
+    left: 250px;
+    
+    border: 3px solid black;
+    animation: border-pulsate 8s infinite ease-in-out;
+    background: linear-gradient(135deg , #000 , #444);
+    box-shadow: 0 0 3px 3px #444;
+
+}
+
+@keyframes border-pulsate {
+
+    0%   { border-color: rgba(0, 255, 255, 1); }
+    50%  { border-color: rgba(0, 255, 255, 0); }
+    100% { border-color: rgba(0, 255, 255, 1); }
+
+}
