@@ -7,7 +7,7 @@ function onDragStart (event) {
     event
         .currentTarget
         .style
-        .backgroundColor = 'rgb(37 , 109 , 133)'
+        .backgroundColor = '#444a'
     
 }
 
